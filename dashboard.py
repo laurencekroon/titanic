@@ -16,9 +16,7 @@ st.set_page_config(
 # Load the data
 @st.cache_data
 def load_data():
-    # Using the direct URL to the Titanic dataset from seaborn
-    url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/titanic.csv"
-    df = pd.read_csv(url)
+    df = pd.read_csv("data/titanic.csv")
     return df
 
 
