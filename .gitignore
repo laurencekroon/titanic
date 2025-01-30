@@ -15,3 +15,6 @@ venv/
 
 # Streamlit
 .streamlit/ 
+
+.main.py
+.check.py
