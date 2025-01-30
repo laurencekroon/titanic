@@ -133,11 +133,11 @@ else:  # Prediction Model
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
 
-    st.subheader("Model Performance")
+    st.subheader("Model Performance - Random Forest Classifier")
     st.write(f"Model Accuracy: {accuracy:.2%}")
 
     # Feature importance
-    st.subheader("Feature Importance")
+    st.subheader("Feature Importance - Random Forest Classifier")
     feature_importance = pd.DataFrame(
         {"Feature": X.columns, "Importance": model.feature_importances_}
     ).sort_values("Importance", ascending=False)
@@ -148,7 +148,7 @@ else:  # Prediction Model
     st.pyplot(fig5)
 
     # Interactive Prediction
-    st.subheader("Make a Prediction")
+    st.subheader("Make a Prediction - Random Forest Classifier")
 
     col1, col2 = st.columns(2)
 
