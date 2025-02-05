@@ -20,10 +20,18 @@ df_test.info()
 
 # create new dataframe, drop column Survived, and concatenate df_train and df_test
 df = df_train.drop(columns=["Survived"])
-df = pd.concat([df_train, df_test], ignore_index=True)
+df = pd.concat([df, df_test], ignore_index=True)
 
 df.head()
 df.shape
 
 df.isnull().sum()
 
+# save the dataframe to a csv file
+df.to_csv("data/titanic.csv", index=False)
+
+# read the dataframe from a csv file
+df = pd.read_csv("data/titanic.csv")
+
+df.head()
+df.shape
